@@ -1,0 +1,61 @@
+/* Slider container styles */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;  /* Max width for the slider container */
+    margin: 0 auto;
+    overflow: hidden;  /* Hide overflow */
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Slider image wrapper */
+  .slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Slider image */
+  .slider-images {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .slider-image {
+    width: 800px;  /* Adjusted to fit smaller images */
+    height: 400px; /* Adjusted height */
+    object-fit: cover;  /* Maintain aspect ratio */
+  }
+  
+  /* Arrow buttons */
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  /* Hover effect on buttons */
+  .prev-btn:hover,
+  .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
