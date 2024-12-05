@@ -1,0 +1,98 @@
+/* Navigation Bar Styling */
+.navigation-bar {
+    background-color: #f8f9fa; /* Light grey background */
+    border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+    padding: 15px 0;
+    font-family: "Poppins", sans-serif; /* Match header font */
+  }
+  
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Adjust spacing between items */
+    justify-content: flex-start; /* Align items to the left */
+    flex-wrap: wrap; /* Enable wrapping on smaller screens */
+  }
+  
+  .nav-item {
+    position: relative;
+    flex: 1 1 auto; /* Allow flexible resizing */
+  }
+  
+  .nav-item .btn {
+    font-size: 1rem; /* Match header font size */
+    font-weight: 500;
+    color: #333; /* Neutral color matching the header style */
+    background: none; /* Seamless style */
+    border: none;
+    padding: 10px 15px; /* Add consistent spacing for buttons */
+    text-align: left;
+    width: 100%; /* Ensure buttons stretch across the screen if needed */
+    white-space: nowrap; /* Prevent text breaking on smaller screens */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Remove hover effect for the button */
+  .nav-item .btn:hover {
+    background-color: transparent; /* No background change on hover */
+    color: #333; /* Keep the text color unchanged on hover */
+  }
+  
+  /* Dropdown menu styles */
+  .nav-item .dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    font-family: "Poppins", sans-serif; /* Match header font */
+  }
+  
+  .nav-item .dropdown-menu a {
+    font-size: 0.9rem; /* Consistent with the header dropdowns */
+    padding: 8px 20px;
+    color: #333; /* Neutral color matching dropdowns in the header */
+    background-color: transparent; /* Remove background color on hover */
+    transition: none; /* No transition for hover effect */
+  }
+  
+  /* Remove hover effect on dropdown items */
+  .nav-item .dropdown-menu a:hover {
+    color: #333; /* Keep the text color unchanged on hover */
+    background-color: transparent; /* No background change on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-list {
+      gap: 10px; /* Reduce spacing between items */
+    }
+  
+    .nav-item .btn {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      padding: 8px 10px; /* Reduce padding for better fit */
+    }
+  
+    .navigation-bar {
+      padding: 10px 0; /* Reduce padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .nav-list {
+      flex-direction: column; /* Stack navigation items vertically */
+      align-items: flex-start; /* Align items to the left */
+      gap: 5px; /* Reduce spacing further */
+    }
+  
+    .nav-item .btn {
+      font-size: 0.85rem; /* Further reduce font size for very small screens */
+      padding: 6px 8px; /* Adjust padding for a compact fit */
+    }
+  }
+  
