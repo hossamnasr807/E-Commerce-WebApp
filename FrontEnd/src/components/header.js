@@ -1,19 +1,20 @@
 import React from "react";
 import "./header.css"; // Ensure you have this CSS file for custom styling.
 
+
 const Header = () => {
   return (
     <header className="header bg-warning py-3">
       <div className="container d-flex justify-content-between align-items-center">
-        {/* Logo */}
-        <div className="logo">
-          <h1 className="m-0 fw-bold text-dark">LOGO</h1>
-        </div>
+        {/* Logo and Country Selection */}
+        <div className="left-section d-flex align-items-center">
+          {/* Logo */}
+          <div className="logo me-3">
+            <h1 className="m-0 fw-bold text-dark">LOGO</h1>
+          </div>
 
-        {/* Search Bar with Country Selection */}
-        <div className="search-bar-container d-flex align-items-center w-50">
           {/* Country Dropdown */}
-          <div className="dropdown me-3">
+          <div className="dropdown">
             <button
               className="btn dropdown-toggle d-flex align-items-center"
               type="button"
@@ -22,28 +23,50 @@ const Header = () => {
               aria-expanded="false"
             >
               <img
-                src="/images/egypt-flag.png"
+                src="/images/egypt-flag.png" /* Path to Egypt flag */
                 alt="Egypt"
                 className="flag-icon me-2"
               />
-              Cairo
+              Egypt
             </button>
             <ul className="dropdown-menu" aria-labelledby="countryDropdown">
-              <li><a className="dropdown-item" href="#">Cairo</a></li>
-              <li><a className="dropdown-item" href="#">Alexandria</a></li>
-              <li><a className="dropdown-item" href="#">Giza</a></li>
+              <li>
+                <a className="dropdown-item d-flex align-items-center" href="#">
+                  <img
+                    src="/images/egypt-flag.png" /* Path to Egypt flag */
+                    alt="Egypt"
+                    className="flag-icon me-2"
+                  />
+                  Egypt
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item d-flex align-items-center" href="#">
+                  <img
+                    src="/images/saudi-flag.png" /* Path to Saudi Arabia flag */
+                    alt="Saudi Arabia"
+                    className="flag-icon me-2"
+                  />
+                  Saudi Arabia
+                </a>
+              </li>
             </ul>
           </div>
+        </div>
 
-          {/* Search Bar */}
+        {/* Search Bar */}
+        <div className="search-bar w-50">
           <input
             type="text"
-            className="form-control me-3"
+            className="form-control"
             placeholder="What are you looking for?"
           />
+        </div>
 
+        {/* Right Section: Icons and Dropdowns */}
+        <div className="right-section d-flex align-items-center">
           {/* Language Dropdown */}
-          <div className="dropdown">
+          <div className="dropdown me-3">
             <button
               className="btn dropdown-toggle"
               type="button"
@@ -58,10 +81,7 @@ const Header = () => {
               <li><a className="dropdown-item" href="#">العربية</a></li>
             </ul>
           </div>
-        </div>
 
-        {/* Icons and Dropdowns */}
-        <div className="icons-and-dropdowns d-flex align-items-center">
           {/* Wishlist Dropdown */}
           <div className="dropdown me-3">
             <button
