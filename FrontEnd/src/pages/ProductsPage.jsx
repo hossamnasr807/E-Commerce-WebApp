@@ -34,7 +34,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Sneackers",
+    name: "Sneakers",
     price: "$34",
     image: "images/products/sneakers.jpg",
   },
@@ -61,6 +61,7 @@ const ProductCard = ({ product }) => (
     />
     <h3 className="product-card-title">{product.name}</h3>
     <p className="product-card-price">{product.price}</p>
+    <button className="buy-now-button">Buy Now</button>
   </div>
 );
 
